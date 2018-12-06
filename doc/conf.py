@@ -27,6 +27,9 @@ Use:
 sphinx-build -c ../extras/help_generator -b html . _build/html
 
 """
+import sphinx_gallery
+import matplotlib
+matplotlib.use('Agg')
 
 import sys
 import os
@@ -37,7 +40,7 @@ import pip
 # pip.main(['install', 'Sphinx==1.5.6'])
 # pip.main(['install', 'sphinx-gallery'])
 
-# import sphinx_gallery
+#import sphinx_gallery
 import subprocess
 
 # import shlex
@@ -46,7 +49,7 @@ import subprocess
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 from subprocess import check_output, CalledProcessError
-from mock import Mock as MagicMock
+#from mock import Mock as MagicMock
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -84,14 +87,15 @@ for dirpath, dirnames, files in os.walk(os.path.dirname(__file__)):
 
 # import errors on libraries that depend on C modules
 # http://blog.rtwilson.com/how-to-make-your-sphinx-documentation-compile-with-readthedocs-when-youre-using-numpy-and-scipy/
-class Mock(MagicMock):
-    @classmethod
-    def __getattr__(cls, name):
-            return MagicMock()
+# class Mock(MagicMock):
+#     @classmethod
+#     def __getattr__(cls, name):
+#            return MagicMock()
 
 
-MOCK_MODULES = ['numpy', 'scipy', 'matplotlib', 'matplotlib.pyplot', 'pandas']
-sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
+# MOCK_MODULES = ['numpy', 'scipy', 'matplotlib', 'matplotlib.pyplot',
+# 'pandas']
+# sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
@@ -121,16 +125,19 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
+    'sphinx_gallery.gen_gallery',
 ]
 
-# sphinx_gallery_conf = {
-#    'doc_module': ('sphinx_gallery', 'numpy'),
-#    # path to your examples scripts
-#    'examples_dirs': '../pynest/examples',
-#    # path where to save gallery generated examples
-#    'gallery_dirs': 'auto_examples',
-#    'backreferences_dir': False
-# }
+sphinx_gallery_conf = {
+    'doc_module': ('sphinx_gallery', 'numpy'),
+    # path to your examples scripts
+    'examples_dirs': '../pynest/examples',
+    # path where to save gallery generated examples
+    'gallery_dirs': 'auto_examples',
+    'backreferences_dir': False,
+    'line_numbers': True,
+    'filename_pattern': 'one_neuron\.py',
+}
 
 
 

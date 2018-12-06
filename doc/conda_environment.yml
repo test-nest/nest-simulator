@@ -38,6 +38,7 @@ dependencies:
 - pillow
 - pip
 - pycparser
+- pydot
 - pygments
 - pyopenssl
 - pysocks
@@ -71,3 +72,6 @@ dependencies:
   - sphinx_gallery
   - sphinxcontrib-napoleon
   - mock
+  - helper
+  - network
+
