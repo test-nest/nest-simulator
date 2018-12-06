@@ -33,5 +33,5 @@ setup(
     #package_data={
     #    'nest': ['pynest-init.sli'],
     #    'nest.tests': ['test_aeif_data_lsodar.dat'],
-    },
+    }
 )
