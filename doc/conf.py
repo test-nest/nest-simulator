@@ -52,8 +52,9 @@ from mock import Mock as MagicMock
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('./..'))
+sys.path.insert(0, os.pathjoin(os.path.dirname(__file__), '..', 'pynest'))
 sys.path.insert(0, os.path.abspath('./../topology'))
-sys.path.insert(0, os.path.abspath('./../pynest/nest'))
+# sys.path.insert(0, os.path.abspath('./../pynest/nest'))
 
 source_suffix = ['.rst', '.md']
 source_parsers = {
@@ -220,6 +221,16 @@ github_doc_root = ''
 
 intersphinx_mapping = {'https://docs.python.org/': None}
 
+def run_apidoc(_):
+    from sphinx.apidoc import main
+    parentFolder = os.path.join(os.path.dirname(__file__), '..')
+    cur_dir = os.path.abspath(os.path.dirname(__file__))
+    sys.path.append(parentFolder)
+    # change "backend" to your module name
+    module = os.path.join(parentFolder,'backend')
+    output_path = os.path.join(cur_dir, 'ref_material')
+    main(['-e','-f','-o', output_path, module])
+
 
 def setup(app):
     # app.add_stylesheet('css/my_styles.css')
@@ -232,7 +243,7 @@ def setup(app):
             'enable_eval_rst': True
             }, True)
     app.add_transform(AutoStructify)
-
+    app.connect('builder-inited', run_apidoc)
 
 # -- Options for LaTeX output ---------------------------------------------
 
