@@ -28,10 +28,10 @@ setup(
     author='The NEST Initiative',
     url='http://www.nest-simulator.org',
     license='GPLv2+',
-    packages=['nest', 'nest.tests', 'nest.tests.test_sp', 'nest.lib'],
+    packages=['nest', 'nest.tests', 'nest.lib'],
     package_dir={'nest': 'pynest/nest'},
-    package_data={
-        'nest': ['pynest-init.sli'],
-        'nest.tests': ['test_aeif_data_lsodar.dat'],
+    #package_data={
+    #    'nest': ['pynest-init.sli'],
+    #    'nest.tests': ['test_aeif_data_lsodar.dat'],
     },
 )
