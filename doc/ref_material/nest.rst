@@ -7,7 +7,6 @@ Subpackages
 .. toctree::
 
     nest.lib
-    nest.tests
 
 Submodules
 ----------
