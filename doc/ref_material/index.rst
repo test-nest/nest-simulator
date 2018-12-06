@@ -4,6 +4,8 @@ Reference Material
 .. toctree::
 
    nest.lib
+   pynest
+   nest
 
 
 * Here you can find `the PyNEST APIs <http://www.nest-simulator.org/pynest-api/nest.lib.html#nest-lib-package>`_
