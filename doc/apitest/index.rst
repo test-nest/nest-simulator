@@ -5,3 +5,4 @@ testing_api
 
    nest
    nest.lib
+   pynestkernel
