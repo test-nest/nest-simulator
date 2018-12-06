@@ -1,6 +1,6 @@
 matplotlib
 recommonmark==0.4.0
-sphinx==1.5
+sphinx==1.7
 sphinx_autobuild
 PyYAML==3.12
 docutils<0.13.1
