@@ -20,6 +20,7 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 from distutils.core import setup
+from Cython.Build import cythonize
 
 setup(
     name='PyNEST',
@@ -34,4 +35,5 @@ setup(
         'nest': ['pynest-init.sli'],
         'nest.tests': ['test_aeif_data_lsodar.dat'],
         },
+    ext_modules = cythonize("pynest/pynestkernel.pyx")
 )
