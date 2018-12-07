@@ -16,7 +16,6 @@ Table of Contents
    examples/index
    guides/index
    getting_help
-   apitest/index
    ref_material/index
 
 .. toctree::
