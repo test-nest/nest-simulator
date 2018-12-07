@@ -30,7 +30,8 @@ setup(
     license='GPLv2+',
     packages=['nest', 'nest.tests', 'nest.lib'],
     package_dir={'nest': 'pynest/nest'},
-    #package_data={
-    #    'nest': ['pynest-init.sli'],
-    #    'nest.tests': ['test_aeif_data_lsodar.dat'],
+    package_data={
+        'nest': ['pynest-init.sli'],
+        'nest.tests': ['test_aeif_data_lsodar.dat'],
+        },
 )

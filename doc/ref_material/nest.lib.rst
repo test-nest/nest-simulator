@@ -7,7 +7,7 @@ Submodules
 nest\.lib\.hl\_api\_connections module
 --------------------------------------
 
-.. automodule:: hl_api_connections
+.. automodule:: nest.lib.hl_api_connections
     :members:
     :undoc-members:
     :show-inheritance:
@@ -15,7 +15,7 @@ nest\.lib\.hl\_api\_connections module
 nest\.lib\.hl\_api\_helper module
 ---------------------------------
 
-.. automodule:: hl_api_helper
+.. automodule:: nest.lib.hl_api_helper
     :members:
     :undoc-members:
     :show-inheritance:
