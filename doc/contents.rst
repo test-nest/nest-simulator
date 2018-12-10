@@ -17,6 +17,7 @@ Table of Contents
    guides/index
    getting_help
    api_ref/nest.lib
+   api_ref/lib
 
 .. toctree::
    :maxdepth: 2
