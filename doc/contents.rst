@@ -16,7 +16,7 @@ Table of Contents
    examples/index
    guides/index
    getting_help
-   ref_material/index
+   api_ref/modules
 
 .. toctree::
    :maxdepth: 2
