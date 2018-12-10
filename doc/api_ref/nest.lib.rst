@@ -1,7 +1,7 @@
 nest\.lib package
 =================
 
-Submodules
+Modules
 ----------
 
 .. toctree::
@@ -15,10 +15,13 @@ Submodules
    nest.lib.hl_api_simulation
    nest.lib.hl_api_subnets
 
-Module contents
----------------
+Modules2
+----------
 
-.. automodule:: nest.lib
-    :members:
-    :undoc-members:
-    :show-inheritance:
+.. toctree::
+
+   nest.raster_plot
+   nest.visualization
+   nest.voltage_trace
+
+
