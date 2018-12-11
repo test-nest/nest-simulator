@@ -84,7 +84,7 @@ source_parsers = {
             # check_output(args)
 
 import shlex, subprocess
-command_line = "sudo apt install -y wget git cmake autotools-dev  \
+command_line = "apt-get install -y wget git cmake autotools-dev  \
                 software-properties-common build-essential autoconf \
                 python3 libltdl-dev libreadline-dev libncurses5-dev  \
                 libgsl-dev openmpi-bin python3-dev libopenmpi-dev  \
