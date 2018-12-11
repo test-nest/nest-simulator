@@ -29,7 +29,7 @@ dependencies:
 - libstdcxx-ng # Linux only
 - markupsafe
 - matplotlib
-- mpi4pi
+- mpi4py
 - ncurses=5.9
 - nest
 - numpy
@@ -42,6 +42,7 @@ dependencies:
 - pycparser
 - pydot
 - pygments
+- PyHamcrest
 - pyopenssl
 - pysocks
 - pytest
