@@ -133,13 +133,14 @@ sphinx_gallery_conf = {
     # path to your examples scripts
     'examples_dirs': '../pynest/examples',
     # path where to save gallery generated examples
-    'gallery_dirs': 'auto_examples',
+    'gallery_dirs': 'py-examples',
     'backreferences_dir': False,
     'line_numbers': True,
-    'filename_pattern': 'one_neuron\.py',
+    'filename_pattern': '(/.*)',
+    'ignore_pattern': '(/LeNovre|/music|/Potjans|/vinit|/csa|/gif_'
+                      '|/sinusoidal_gamma|/rate_|/brunel_siegert|/cross'
+                      '|/plot|/if_curve|/Campbell|/hpc)',
 }
-
-
 
 mathjax_path = \
     "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax" \
