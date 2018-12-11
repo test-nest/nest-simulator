@@ -29,10 +29,12 @@ dependencies:
 - libstdcxx-ng # Linux only
 - markupsafe
 - matplotlib
+- mpi4pi
 - ncurses=5.9
 - nest
 - numpy
 - numpydoc
+- openmpi
 - openssl
 - path.py
 - pillow
