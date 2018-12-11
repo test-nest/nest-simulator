@@ -27,14 +27,16 @@ dependencies:
 - libffi
 - libgcc-ng # Linux only
 - libstdcxx-ng # Linux only
+- libtool
 - markupsafe
 - matplotlib
-- mpi4py
+- mkl
 - ncurses=5.9
 - nest
 - numpy
 - numpydoc
-- openmpi
+- openblas
+- openmpi>=2.1
 - openssl
 - path.py
 - pillow
@@ -48,7 +50,7 @@ dependencies:
 - pytest
 - python==3.5
 - pytz
-- readline=6.2
+- readline==6.2*
 - requests
 - setuptools
 - scipy
