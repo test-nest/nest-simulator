@@ -1,5 +1,5 @@
-pynest
-======
+nest
+====
 
 .. toctree::
    :maxdepth: 4
