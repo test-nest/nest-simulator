@@ -42,7 +42,7 @@ dependencies:
 - pyopenssl
 - pysocks
 - pytest
-- python==3.5
+- python
 - pytz
 - readline=6.2
 - requests
@@ -50,13 +50,14 @@ dependencies:
 - scipy
 - six
 - snowballstemmer
-- sphinx==1.5.6
+- sphinx
 - sphinxcontrib
 - sphinxcontrib-websupport
 - sphinx_rtd_theme
 - sqlite
 - statsmodels
 - tk
+- typing
 - urllib3
 - wheel
 - xz
