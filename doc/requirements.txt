@@ -18,6 +18,7 @@ cmake
 numpy
 numpydoc
 scipy
+matplotlib
 example
 Image
 seaborn

@@ -16,8 +16,7 @@ Table of Contents
    examples/index
    guides/index
    getting_help
-   api_ref/nest.lib
-   api_ref/lib
+   api_ref/modules
 
 .. toctree::
    :maxdepth: 2
