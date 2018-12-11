@@ -1,8 +1,8 @@
 name: doc
 channels:
-- defaults
-- conda-forge
 - bioconda
+- conda-forge
+- defaults
 dependencies:
 - alabaster
 - asn1crypto
@@ -36,7 +36,7 @@ dependencies:
 - numpy
 - numpydoc
 - openblas
-- openmpi>=2.1
+- openmpi
 - openssl
 - path.py
 - pillow
