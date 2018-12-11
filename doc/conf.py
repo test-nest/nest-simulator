@@ -65,23 +65,43 @@ source_parsers = {
 
 # -- Checking for pandoc --------------------------------------------------
 
-try:
-    print(check_output(['pandoc', '--version']))
-except CalledProcessError:
-    print("No pandoc on %s" % os.environ['PATH'])
+#try:
+#    print(check_output(['pandoc', '--version']))
+#except CalledProcessError:
+#    print("No pandoc on %s" % os.environ['PATH'])
 
 
-for dirpath, dirnames, files in os.walk(os.path.dirname(__file__)):
-    for f in files:
-        if f.endswith('.md'):
-            ff = os.path.join(dirpath, f)
-            print(ff)
-            fb = os.path.basename(f)[:-3]
-            print(fb)
-            fo = fb + ".rst"
-            args = ['pandoc', ff, '-o', fo]
+#for dirpath, dirnames, files in os.walk(os.path.dirname(__file__)):
+#    for f in files:
+#        if f.endswith('.md'):
+#            ff = os.path.join(dirpath, f)
+#            print(ff)
+#            fb = os.path.basename(f)[:-3]
+#            print(fb)
+#            fo = fb + ".rst"
+#            args = ['pandoc', ff, '-o', fo]
             # check_output(args)
             # check_output(args)
+
+import shlex, subprocess
+command_line = "sudo apt install -y wget git cmake autotools-dev  \
+                software-properties-common build-essential autoconf \
+                python3 libltdl-dev libreadline-dev libncurses5-dev  \
+                libgsl-dev openmpi-bin python3-dev libopenmpi-dev  \
+                libibverbs-dev python3-numpy python3-scipy python3-matplotlib \
+                python3-setuptools cython python-statsmodels python3-mpi4py \
+                language-pack-en libtool unzip \
+                python3-nose \
+                vera++ \
+                pep8 \
+                libpcre3 \
+                libpcre3-dev \
+                jq \
+                doxygen"
+args = shlex.split(command_line)
+print(args)
+p = subprocess.Popen(args) # Success!
+
 
 # -- General configuration ------------------------------------------------
 
