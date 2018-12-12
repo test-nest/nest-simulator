@@ -16,7 +16,7 @@ Table of Contents
    examples/index
    guides/index
    getting_help
-   api_ref/modules
+   pynest_apis/modules
 
 .. toctree::
    :maxdepth: 2
