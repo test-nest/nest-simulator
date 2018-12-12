@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# setup.py
+# __init__.py
 #
 # This file is part of NEST.
 #
@@ -19,19 +19,4 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-from distutils.core import setup
-
-setup(
-    name='PyNEST',
-    version='NEST_VERSION_VERSION',
-    description='PyNEST provides Python bindings for NEST',
-    author='The NEST Initiative',
-    url='http://www.nest-simulator.org',
-    license='GPLv2+',
-    packages=['nest', 'nest.tests', 'nest.tests.test_sp', 'nest.lib'],
-    package_dir={'nest': 'nest-simulator/pynes/nest'},
-    package_data={
-        'nest': ['pynest-init.sli'],
-        'nest.tests': ['test_aeif_data_lsodar.dat'],
-    },
-)
+# Intentionally left blank.

@@ -17,6 +17,7 @@ Table of Contents
    guides/index
    getting_help
    api_ref/modules
+   test_api/modules
 
 .. toctree::
    :maxdepth: 2
