@@ -53,7 +53,7 @@ from mock import Mock as MagicMock
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('./../'))
 #sys.path.insert(0, os.path.abspath('./../topology'))
-sys.path.insert(0, os.path.abspath('./../test_pynest/'))
+sys.path.insert(0, os.path.abspath('./../pynest/'))
 
 for p in sys.path:
     print(p)
