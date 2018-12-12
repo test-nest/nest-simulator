@@ -84,7 +84,7 @@ for dirpath, dirnames, files in os.walk(os.path.dirname(__file__)):
             # check_output(args)
 
 # -- General configuration ------------------------------------------------
-
+#autodoc_mock_imports = ["pynestkernel", "scipy", "numpy", "matplotlib", "pandas"]
 # import errors on libraries that depend on C modules
 # http://blog.rtwilson.com/how-to-make-your-sphinx-documentation-compile-with-readthedocs-when-youre-using-numpy-and-scipy/
 class Mock(MagicMock):
@@ -180,7 +180,7 @@ language = None
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'conngen',
-                    'nest_by_example', 'README.md']
+    'nest_by_example', 'README.md']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -224,6 +224,17 @@ github_doc_root = ''
 intersphinx_mapping = {'https://docs.python.org/': None}
 
 
+#def skipUnwanted(app, what, name, obj, skip, options):
+#    """Skip pynestkernel"""
+#    if name == "pynestkernel":
+#        return True
+#    else:
+#        return False
+def skip(app, what, name, obj, skip, options):
+    if name == "__init__":
+        return False
+    return skip
+
 def setup(app):
     # app.add_stylesheet('css/my_styles.css')
     app.add_stylesheet('css/custom.css')
@@ -235,7 +246,8 @@ def setup(app):
             'enable_eval_rst': True
             }, True)
     app.add_transform(AutoStructify)
-
+    app.connect("autodoc-skip-member", skip)
+    #app.connect('autodoc-skip-member', skipUnwanted)
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -293,3 +305,4 @@ texinfo_documents = [
 #    html_theme = 'alabaster'
 # else:
 #    html_theme = 'nat'
+

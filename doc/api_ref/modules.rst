@@ -4,4 +4,4 @@ nest
 .. toctree::
    :maxdepth: 4
 
-   nest
+   nest.lib
