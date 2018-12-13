@@ -51,9 +51,9 @@ from mock import Mock as MagicMock
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('./../'))
+sys.path.insert(0, os.path.abspath('..'))
 #sys.path.insert(0, os.path.abspath('./../topology'))
-#sys.path.insert(0, os.path.abspath('./../pynest/'))
+sys.path.insert(0, os.path.abspath('./../pynest/'))
 sys.path.insert(0, os.path.abspath('./../pynest/nest'))
 
 for p in sys.path:
@@ -229,10 +229,6 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 #        return True
 #    else:
 #        return False
-def skip(app, what, name, obj, skip, options):
-    if name == "__init__":
-        return False
-    return skip
 
 def setup(app):
     # app.add_stylesheet('css/my_styles.css')
@@ -245,8 +241,6 @@ def setup(app):
             'enable_eval_rst': True
             }, True)
     app.add_transform(AutoStructify)
-    app.connect("autodoc-skip-member", skip)
-    #app.connect('autodoc-skip-member', skipUnwanted)
 
 # -- Options for LaTeX output ---------------------------------------------
 
