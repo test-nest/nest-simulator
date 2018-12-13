@@ -28,7 +28,7 @@ setup(
     author='The NEST Initiative',
     url='http://www.nest-simulator.org',
     license='GPLv2+',
-    packages=['nest', 'nest.lib'],
-    package_dir={'nest': 'nest-simulator/pynest/nest'},
+    packages=['nest','nest.lib'],
+    package_dir={'nest': 'pynest/nest/'},
 
 )
