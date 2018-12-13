@@ -135,7 +135,9 @@ extensions = [
 #    'backreferences_dir': False
 # }
 
-
+autodoc_default_options = {
+    'exclude-members': '__init__'
+}
 
 mathjax_path = \
     "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax" \
