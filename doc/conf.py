@@ -53,7 +53,7 @@ from mock import Mock as MagicMock
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('./../'))
 #sys.path.insert(0, os.path.abspath('./../topology'))
-sys.path.insert(0, os.path.abspath('./../pynest/'))
+sys.path.insert(0, os.path.abspath('./../pynest/nest'))
 
 for p in sys.path:
     print(p)
@@ -134,10 +134,6 @@ extensions = [
 #    'gallery_dirs': 'auto_examples',
 #    'backreferences_dir': False
 # }
-
-autodoc_default_options = {
-    'exclude-members': '__init__'
-}
 
 mathjax_path = \
     "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax" \
