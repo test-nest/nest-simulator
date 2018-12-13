@@ -68,11 +68,3 @@ nest\.lib\.hl\_api\_subnets module
     :undoc-members:
     :show-inheritance:
 
-
-Module contents
----------------
-
-.. automodule:: nest.lib
-    :members:
-    :undoc-members:
-    :show-inheritance:
