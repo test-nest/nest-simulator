@@ -105,12 +105,10 @@ source_parsers = {
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 
-
 # command_line = ". activate nest"
 # args = shlex.split(command_line)
 # print(args)
 # p = subprocess.Popen(args, shell=True) # Success!
-subprocess.call([".", "activate", "nest"])
 
 extensions = [
     'sphinx.ext.autodoc',
