@@ -72,7 +72,7 @@ try:
     print(check_output(['export', 'NEST_PYTHON_PREFIX="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/lib/python3.5/site-packages"']))
     print(check_output(['export', 'PYTHONPATH="home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/lib/python3.5/site-packages:$PYTHONPATH"']))
     print(check_output(['export', 'PATH="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/bin:$PATH"']))
-expect CalledProcessError: print("No Path")
+except CalledProcessError: print("No Path")
 
 # -- Checking for pandoc --------------------------------------------------
 
