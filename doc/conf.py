@@ -64,6 +64,16 @@ source_parsers = {
     '.md': CommonMarkParser
 }
 
+try:
+    print(check_output(['export', 'NEST_INSTALL_DIR="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples"']))
+    print(check_output(['export', 'NEST_DATA_DIR="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/share/nest"']))
+    print(check_output(['export', 'NEST_DOC_DIR="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/share/doc/nest"']))
+    print(check_output(['export', 'NEST_MODULE_PATH="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/lib/nest"']))
+    print(check_output(['export', 'NEST_PYTHON_PREFIX="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/lib/python3.5/site-packages"']))
+    print(check_output(['export', 'PYTHONPATH="home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/lib/python3.5/site-packages:$PYTHONPATH"']))
+    print(check_output(['export', 'PATH="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/bin:$PATH"']))
+expect CalledProcessError: print("No Path")
+
 # -- Checking for pandoc --------------------------------------------------
 
 # try:
