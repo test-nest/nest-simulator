@@ -110,7 +110,7 @@ source_parsers = {
 # args = shlex.split(command_line)
 # print(args)
 # p = subprocess.Popen(args, shell=True) # Success!
-subprocess.call([".", ""activate", "nest"])
+subprocess.call([".", "activate", "nest"])
 
 extensions = [
     'sphinx.ext.autodoc',
