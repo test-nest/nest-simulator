@@ -1,3 +1,4 @@
+name: nest
 channels:
    - steffengraber
    - conda-forge

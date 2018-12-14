@@ -83,24 +83,25 @@ source_parsers = {
             # check_output(args)
             # check_output(args)
 
-import shlex, subprocess
-command_line = "apt-get install -y wget git cmake autotools-dev  \
-                software-properties-common build-essential autoconf \
-                python3 libltdl-dev libreadline-dev libncurses5-dev  \
-                libgsl-dev openmpi-bin python3-dev libopenmpi-dev  \
-                libibverbs-dev python3-numpy python3-scipy python3-matplotlib \
-                python3-setuptools cython python-statsmodels python3-mpi4py \
-                language-pack-en libtool unzip \
-                python3-nose \
-                vera++ \
-                pep8 \
-                libpcre3 \
-                libpcre3-dev \
-                jq \
-                doxygen"
-args = shlex.split(command_line)
-print(args)
-p = subprocess.Popen(args) # Success!
+#import shlex, subprocess
+#command_line = "apt-get install -y wget git cmake autotools-dev  \
+#                software-properties-common build-essential autoconf \
+#                python3 libltdl-dev libreadline-dev libncurses5-dev  \
+#                libgsl-dev openmpi-bin python3-dev libopenmpi-dev  \
+#                libibverbs-dev python3-numpy python3-scipy
+##                python3-matplotlib \
+#                python3-setuptools cython python-statsmodels python3-mpi4py \
+#                language-pack-en libtool unzip \
+#                python3-nose \
+#                vera++ \
+#                pep8 \
+#                libpcre3 \
+#                libpcre3-dev \
+#                jq \
+#                doxygen"
+#args = shlex.split(command_line)
+#print(args)
+#p = subprocess.Popen(args) # Success!
 
 
 # -- General configuration ------------------------------------------------
@@ -136,6 +137,13 @@ p = subprocess.Popen(args) # Success!
 #    'sphinx.ext.mathjax',
 #    'sphinx_gallery.gen_gallery',
 # ]
+
+import shlex, subprocess
+command_line = "source activate nest"
+args = shlex.split(command_line)
+print(args)
+p = subprocess.Popen(args) # Success!
+
 
 extensions = [
     'sphinx.ext.autodoc',
