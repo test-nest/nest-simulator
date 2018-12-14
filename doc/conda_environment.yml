@@ -49,8 +49,3 @@ dependencies:
    - Image
    - network
    - matplotlib
-   - snowballstemmer
-   - sphinx==1.5.6
-   - sphinxcontrib
-   - sphinxcontrib-websupport
-   - sphinx_rtd_theme
