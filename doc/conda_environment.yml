@@ -14,6 +14,7 @@ dependencies:
 - icu
 - jsoncpp
 - libtool
+- matplotlib
 - mpi4py
 - mkl
 - ncurses
@@ -48,4 +49,5 @@ dependencies:
    - helper
    - Image
    - network
-   - matplotlib
+   - recommonmark
+   - sphinx_gallery
