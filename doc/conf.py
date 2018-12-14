@@ -34,14 +34,15 @@ matplotlib.use('Agg')
 import sys
 import os
 
-
 import pip
 
 # pip.main(['install', 'Sphinx==1.5.6'])
 # pip.main(['install', 'sphinx-gallery'])
 
-#import sphinx_gallery
+# import sphinx_gallery
 import subprocess
+import shlex
+# import subprocess
 
 # import shlex
 # import recommonmark
@@ -49,7 +50,7 @@ import subprocess
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 from subprocess import check_output, CalledProcessError
-#from mock import Mock as MagicMock
+# from mock import Mock as MagicMock
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -82,26 +83,6 @@ source_parsers = {
 #            # check_output(args)
 #            # check_output(args)
 
-# import shlex, subprocess
-# command_line = "apt-get install -y wget git cmake autotools-dev  \
-#                software-properties-common build-essential autoconf \
-#                python3 libltdl-dev libreadline-dev libncurses5-dev  \
-#                libgsl-dev openmpi-bin python3-dev libopenmpi-dev  \
-#                libibverbs-dev python3-numpy python3-scipy
-#                python3-matplotlib \
-#                python3-setuptools cython python-statsmodels python3-mpi4py \
-#                language-pack-en libtool unzip \
-#                python3-nose \
-#                vera++ \
-#                pep8 \
-#                libpcre3 \
-#                libpcre3-dev \
-#                jq \
-#                doxygen"
-# args = shlex.split(command_line)
-# print(args)
-# p = subprocess.Popen(args) # Success!
-
 # -- General configuration ------------------------------------------------
 
 # import errors on libraries that depend on C modules
@@ -123,24 +104,13 @@ source_parsers = {
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-# extensions = [
-#    'sphinx.ext.autodoc',
-#    'sphinx.ext.napoleon',
-#    'sphinx.ext.autosummary',
-#    'sphinx.ext.doctest',
-#    'sphinx.ext.intersphinx',
-#    'sphinx.ext.todo',
-#    'sphinx.ext.coverage',
-#    'sphinx.ext.mathjax',
-#    'sphinx_gallery.gen_gallery',
-# ]
 
-import shlex, subprocess
-command_line = ". activate nest"
-args = shlex.split(command_line)
-print(args)
-p = subprocess.Popen(args) # Success!
 
+# command_line = ". activate nest"
+# args = shlex.split(command_line)
+# print(args)
+# p = subprocess.Popen(args, shell=True) # Success!
+subprocess.call(["activate", "nest"])
 
 extensions = [
     'sphinx.ext.autodoc',
