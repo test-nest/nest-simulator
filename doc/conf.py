@@ -65,8 +65,8 @@ source_parsers = {
 }
 
 try:
-   print(check_output(['.',
-   'NEST_INSTALL_DIR="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples"']))
+    print(check_output(['.',
+                       'NEST_INSTALL_DIR="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples"']))
     print(check_output(['.',
                         'NEST_DATA_DIR="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/share/nest"']))
     print(check_output(['.',
@@ -77,9 +77,11 @@ try:
                         'NEST_PYTHON_PREFIX="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/lib/python3.5/site-packages"']))
     print(check_output(['.',
                         'PYTHONPATH="home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/lib/python3.5/site-packages:$PYTHONPATH"']))
-    print(check_output(['.export ',
+    print(check_output(['.',
                         'PATH="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/bin:$PATH"']))
-except CalledProcessError: print("No Path")
+except CalledProcessError:
+    print("No Path")
+
 
 # -- Checking for pandoc --------------------------------------------------
 
