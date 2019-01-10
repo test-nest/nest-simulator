@@ -5,5 +5,3 @@ python:
   version: 3.5
   setup_py_install: false
 
-conda:
-    file: doc/conda_rtd_environment.yml
