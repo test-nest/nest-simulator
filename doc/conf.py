@@ -46,18 +46,15 @@ import subprocess
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 from subprocess import check_output, CalledProcessError
-#from mock import Mock as MagicMock
-from unittest.mock import MagicMock
+from mock import Mock as MagicMock
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('..'))
 #sys.path.insert(0, os.path.abspath('./../topology'))
-#sys.path.insert(0, os.path.abspath('./../pynest/'))
-#sys.path.insert(0, os.path.abspath('./../pynest/nest'))
-
-for p in sys.path:
-    print(p)
+sys.path.insert(0, os.path.abspath('./../pynest/'))
+sys.path.insert(0, os.path.abspath('./../pynest/nest'))
 
 source_suffix = ['.rst', '.md']
 source_parsers = {
@@ -85,6 +82,7 @@ for dirpath, dirnames, files in os.walk(os.path.dirname(__file__)):
             # check_output(args)
 
 # -- General configuration ------------------------------------------------
+
 # import errors on libraries that depend on C modules
 # http://blog.rtwilson.com/how-to-make-your-sphinx-documentation-compile-with-readthedocs-when-youre-using-numpy-and-scipy/
 class Mock(MagicMock):
@@ -93,7 +91,7 @@ class Mock(MagicMock):
             return MagicMock()
 
 
-MOCK_MODULES = ['pynestkernel','numpy', 'scipy', 'matplotlib', 'matplotlib.pyplot', 'pandas']
+MOCK_MODULES = ['numpy', 'scipy', 'matplotlib', 'matplotlib.pyplot', 'pandas']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # If your documentation needs a minimal Sphinx version, state it here.
