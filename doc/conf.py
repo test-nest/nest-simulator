@@ -64,7 +64,6 @@ source_parsers = {
     '.md': CommonMarkParser
 }
 
-
 # try:
 #     print(check_output(['.',
 #                        'NEST_INSTALL_DIR="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples"']))
@@ -82,7 +81,6 @@ source_parsers = {
 #                         'PATH="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/bin:$PATH"']))
 # except CalledProcessError:
 #     print("No Path")
-
 
 # -- Checking for pandoc --------------------------------------------------
 
@@ -145,7 +143,7 @@ extensions = [
 sphinx_gallery_conf = {
     'doc_module': ('sphinx_gallery', 'numpy'),
     # path to your examples scripts
-    'examples_dirs': '../pynest/examples',
+    'examples_dirs': 'py-examples',
     # path where to save gallery generated examples
     'gallery_dirs': 'py-examples',
     'backreferences_dir': False,
