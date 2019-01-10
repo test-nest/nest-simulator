@@ -1,7 +1,0 @@
-python:
-    version: 3
-    setup_py_install: false
-requirements_file: doc/requirements.txt
-conda:
-  file: doc/conda_environment.yml
-
