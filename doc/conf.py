@@ -66,19 +66,33 @@ source_parsers = {
 
 # try:
 #     print(check_output(['.',
-#                        'NEST_INSTALL_DIR="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples"']))
+#                        'NEST_INSTALL_DIR="/home/docs/checkouts/readthedocs.
+#                        org/user_builds/nest-simulator-sg/conda/doc-examples"
+#                        ']))
 #     print(check_output(['.',
-#                         'NEST_DATA_DIR="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/share/nest"']))
+#                         'NEST_DATA_DIR="/home/docs/checkouts/readthedocs.org
+#                         /user_builds/nest-simulator-sg/conda/doc-examples
+#                         /share/nest"']))
 #     print(check_output(['.',
-#                         'NEST_DOC_DIR="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/share/doc/nest"']))
+#                         'NEST_DOC_DIR="/home/docs/checkouts/readthedocs.org
+#                         /user_builds/nest-simulator-sg/conda/doc-examples
+#                         /share/doc/nest"']))
 #     print(check_output(['.',
-#                         'NEST_MODULE_PATH="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/lib/nest"']))
+#                         'NEST_MODULE_PATH="/home/docs/checkouts
+#                         /readthedocs.org/user_builds/nest-simulator-sg
+#                         /conda/doc-examples/lib/nest"']))
 #     print(check_output(['.',
-#                         'NEST_PYTHON_PREFIX="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/lib/python3.5/site-packages"']))
+#                         'NEST_PYTHON_PREFIX="/home/docs/checkouts
+#                         /readthedocs.org/user_builds/nest-simulator-sg/conda
+#                         /doc-examples/lib/python3.5/site-packages"']))
 #     print(check_output(['.',
-#                         'PYTHONPATH="home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/lib/python3.5/site-packages:$PYTHONPATH"']))
+#                         'PYTHONPATH="home/docs/checkouts/readthedocs.org
+#                         /user_builds/nest-simulator-sg/conda/doc-examples
+#                         /lib/python3.5/site-packages:$PYTHONPATH"']))
 #     print(check_output(['.',
-#                         'PATH="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples/bin:$PATH"']))
+#                         'PATH="/home/docs/checkouts/readthedocs.org
+#                         /user_builds/nest-simulator-sg/conda/doc-examples
+#                         /bin:$PATH"']))
 # except CalledProcessError:
 #     print("No Path")
 
