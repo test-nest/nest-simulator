@@ -64,6 +64,8 @@ source_parsers = {
     '.md': CommonMarkParser
 }
 
+conda install -c steffengraber -c conda-forge nest=2.16.0
+
 try:
     print(check_output(['.',
                        'NEST_INSTALL_DIR="/home/docs/checkouts/readthedocs.org/user_builds/nest-simulator-sg/conda/doc-examples"']))
