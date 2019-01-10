@@ -64,7 +64,12 @@ source_parsers = {
     '.md': CommonMarkParser
 }
 
-conda install -c steffengraber -c conda-forge nest=2.16.0
+command_line = "conda install -c steffengraber -c conda-forge nest=2.16.0"
+args = shlex.split(command_line)
+print(args)
+p = subprocess.Popen(args, shell=True) # Success!
+
+
 
 try:
     print(check_output(['.',
