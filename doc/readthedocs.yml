@@ -1,6 +1,6 @@
-type: sphinx
+ build:
+  image: latest
+
 python:
-    version: 3
-    requirements_file: requirements.txt
-formats:
-    - none
+  version: 3.5
+  setup_py_install: false
