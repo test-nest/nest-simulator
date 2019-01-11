@@ -3,7 +3,7 @@ Download NEST
 
 NEST is available under the :doc:`GNU General Public License 2 or later <license>`. This means that you can
 
--  use NEST for your research,
+-  use NEST for your research
 -  modify and improve NEST according to your needs,
 -  distribute NEST to others under the same license.
 
