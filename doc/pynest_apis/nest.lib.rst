@@ -7,7 +7,7 @@ Submodules
 nest\.lib\.hl\_api\_connections module
 --------------------------------------
 
-.. automodule:: nest.lib.hl_api_connections
+.. automodule:: lib.hl_api_connections
     :members:
     :undoc-members:
     :show-inheritance:
@@ -15,7 +15,7 @@ nest\.lib\.hl\_api\_connections module
 nest\.lib\.hl\_api\_helper module
 ---------------------------------
 
-.. automodule:: nest.lib.hl_api_helper
+.. automodule:: lib.hl_api_helper
     :members:
     :undoc-members:
     :show-inheritance:
@@ -23,7 +23,7 @@ nest\.lib\.hl\_api\_helper module
 nest\.lib\.hl\_api\_info module
 -------------------------------
 
-.. automodule:: nest.lib.hl_api_info
+.. automodule:: lib.hl_api_info
     :members:
     :undoc-members:
     :show-inheritance:
@@ -31,7 +31,7 @@ nest\.lib\.hl\_api\_info module
 nest\.lib\.hl\_api\_models module
 ---------------------------------
 
-.. automodule:: nest.lib.hl_api_models
+.. automodule:: lib.hl_api_models
     :members:
     :undoc-members:
     :show-inheritance:
@@ -39,31 +39,31 @@ nest\.lib\.hl\_api\_models module
 nest\.lib\.hl\_api\_nodes module
 --------------------------------
 
-.. automodule:: nest.lib.hl_api_nodes
+.. automodule:: lib.hl_api_nodes
     :members:
     :undoc-members:
     :show-inheritance:
 
-nest\.lib\.hl\_api\_parallel\_computing module
+hl\_api\_parallel\_computing module
 ----------------------------------------------
 
-.. automodule:: nest.lib.hl_api_parallel_computing
+.. automodule:: lib.hl_api_parallel_computing
     :members:
     :undoc-members:
     :show-inheritance:
 
-nest\.lib\.hl\_api\_simulation module
+hl\_api\_simulation module
 -------------------------------------
 
-.. automodule:: nest.lib.hl_api_simulation
+.. automodule:: lib.hl_api_simulation
     :members:
     :undoc-members:
     :show-inheritance:
 
-nest\.lib\.hl\_api\_subnets module
+hl\_api\_subnets module
 ----------------------------------
 
-.. automodule:: nest.lib.hl_api_subnets
+.. automodule:: lib.hl_api_subnets
     :members:
     :undoc-members:
     :show-inheritance:

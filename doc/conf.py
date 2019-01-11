@@ -55,6 +55,7 @@ sys.path.insert(0, os.path.abspath('..'))
 #sys.path.insert(0, os.path.abspath('./../topology'))
 sys.path.insert(0, os.path.abspath('./../pynest/'))
 sys.path.insert(0, os.path.abspath('./../pynest/nest'))
+sys.path.insert(0, os.path.abspath('./../pynest/nest/lib'))
 
 source_suffix = ['.rst', '.md']
 source_parsers = {
