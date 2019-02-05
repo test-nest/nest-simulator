@@ -8,7 +8,7 @@ We have 4 main areas of documentation in which you can contribute:
 
 #. Tutorials
 #. How-to guides
-#. :doc:`PyNEST example script <PyNEST_Examples_instructions>`
+#. :doc:`PyNEST example script <instructions_pynestexamples>`
 #. Source code documentation
 
     #. :doc:`PyNEST API docstrings <instructions_pynestapi>`
