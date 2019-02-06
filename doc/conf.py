@@ -52,7 +52,7 @@ from mock import Mock as MagicMock
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('./..'))
-#sys.path.insert(0, os.path.abspath('./../topology'))
+# sys.path.insert(0, os.path.abspath('./../topology'))
 sys.path.insert(0, os.path.abspath('./../pynest/'))
 sys.path.insert(0, os.path.abspath('./../pynest/nest'))
 sys.path.insert(0, os.path.abspath('./../pynest/nest/lib'))
@@ -86,6 +86,7 @@ for dirpath, dirnames, files in os.walk(os.path.dirname(__file__)):
 
 # import errors on libraries that depend on C modules
 # http://blog.rtwilson.com/how-to-make-your-sphinx-documentation-compile-with-readthedocs-when-youre-using-numpy-and-scipy/
+
 class Mock(MagicMock):
     @classmethod
     def __getattr__(cls, name):
@@ -154,23 +155,10 @@ exhale_args = {
     "exhaleExecutesDoxygen": True,
     # doxy_dir is the parent directory of what you specified in
     # `breathe_projects[breathe_default_project]` in `conf.py`
-    "exhaleDoxygenStdin":  textwrap.dedent('''
+    "exhaleDoxygenStdin": textwrap.dedent('''
         INPUT = ../models
-        # Tell doxygen to output wherever breathe is expecting things
-        OUTPUT_DIRECTORY       = {out}
-        # Tell doxygen to strip the path names (RTD builds produce long abs paths...)
-        STRIP_FROM_PATH        = {strip}
-    '''.format(out=doxyoutput, strip=configs.doxygenStripFromPath))
+    ''')
 
-    # The configurations you specified
-    external_configs = textwrap.dedent(configs.exhaleDoxygenStdin)
-
-    # The full input being sent
-    full_input = "{base}\n{external}\n{internal}\n\n".format(
-        base=configs.DEFAULT_DOXYGEN_STDIN_BASE,
-        external=external_configs,
-        internal=internal_configs
-    )
     "verboseBuild": True
 }
 
@@ -178,7 +166,7 @@ primary_domain = 'cpp'
 
 mathjax_path = \
     "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax" \
-                ".js?config=TeX" \
+            ".js?config=TeX" \
               "-AMS-MML_HTMLorMML"
 
 
@@ -235,7 +223,8 @@ numfig = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
+# on_rtd checks if weare on readthedocs.org, 
+#this line of code grabbed from docs.readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 if not on_rtd:  # only import and set the theme if we're building docs locally
@@ -268,12 +257,13 @@ github_doc_root = ''
 
 intersphinx_mapping = {'https://docs.python.org/': None}
 
-#def skipUnwanted(app, what, name, obj, skip, options):
+# def skipUnwanted(app, what, name, obj, skip, options):
 #    """Skip pynestkernel"""
 #    if name == "pynestkernel":
 #        return True
 #    else:
 #        return False
+
 
 def setup(app):
     # app.add_stylesheet('css/my_styles.css')
