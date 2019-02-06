@@ -170,7 +170,7 @@ exhale_args = {
         base=configs.DEFAULT_DOXYGEN_STDIN_BASE,
         external=external_configs,
         internal=internal_configs
-     )
+    )
     "verboseBuild": True
 }
 
