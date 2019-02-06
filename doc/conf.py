@@ -158,8 +158,6 @@ exhale_args = {
     "exhaleDoxygenStdin": textwrap.dedent('''
         INPUT = ../models
     ''')
-
-    "verboseBuild": True
 }
 
 primary_domain = 'cpp'
