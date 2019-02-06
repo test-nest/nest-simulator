@@ -123,6 +123,8 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
+    'breathe',
+    'exhale',
 ]
 
 # sphinx_gallery_conf = {
@@ -133,6 +135,46 @@ extensions = [
 #    'gallery_dirs': 'auto_examples',
 #    'backreferences_dir': False
 # }
+
+breathe_projects = {"My Project": "./doxyoutput/xml"}
+
+breathe_default_project = "My Project"
+
+# Setup the exhale extension
+exhale_args = {
+    # These arguments are required
+    "containmentFolder":     "./gen_files",
+    "rootFileName":          "library_root.rst",
+    "rootFileTitle":         "Library NEST",
+    "doxygenStripFromPath":  "..",
+    # Suggested optional arguments
+    "createTreeView":        True,
+    # TIP: if using the sphinx-bootstrap-theme, you need
+    # "treeViewIsBootstrap": True,
+    "exhaleExecutesDoxygen": True,
+    # doxy_dir is the parent directory of what you specified in
+    # `breathe_projects[breathe_default_project]` in `conf.py`
+    "exhaleDoxygenStdin":  textwrap.dedent('''
+        INPUT = ../models
+        # Tell doxygen to output wherever breathe is expecting things
+        OUTPUT_DIRECTORY       = {out}
+        # Tell doxygen to strip the path names (RTD builds produce long abs paths...)
+        STRIP_FROM_PATH        = {strip}
+    '''.format(out=doxyoutput, strip=configs.doxygenStripFromPath))
+
+    # The configurations you specified
+    external_configs = textwrap.dedent(configs.exhaleDoxygenStdin)
+
+    # The full input being sent
+    full_input = "{base}\n{external}\n{internal}\n\n".format(
+        base=configs.DEFAULT_DOXYGEN_STDIN_BASE,
+        external=external_configs,
+        internal=internal_configs
+     )
+    "verboseBuild": True
+}
+
+primary_domain = 'cpp'
 
 mathjax_path = \
     "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax" \
@@ -193,7 +235,13 @@ numfig = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+if not on_rtd:  # only import and set the theme if we're building docs locally
+    import sphinx_rtd_theme
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -219,7 +267,6 @@ html_show_copyright = False
 github_doc_root = ''
 
 intersphinx_mapping = {'https://docs.python.org/': None}
-
 
 #def skipUnwanted(app, what, name, obj, skip, options):
 #    """Skip pynestkernel"""
