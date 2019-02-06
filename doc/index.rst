@@ -10,8 +10,9 @@ Welcome to the NEST simulator documentation!
 +------------------------------------+---------------------------------------+
 
 .. toctree::
+   :maxdepth: 2
 
-    gen_files/library_root
+   gen_files/library_root
 
 NEST is a simulator for **spiking neural network models**, ideal for networks of any size, for example:
 

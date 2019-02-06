@@ -34,6 +34,7 @@ import os
 
 import pip
 import textwrap
+from exhale import utils
 # pip.main(['install', 'Sphinx==1.5.6'])
 # pip.main(['install', 'sphinx-gallery'])
 
@@ -140,7 +141,24 @@ extensions = [
 breathe_projects = {"My Project": "./doxyoutput/xml"}
 
 breathe_default_project = "My Project"
-
+# somewhere in `conf.py`, *BERORE* declaring `exhale_args`
+def specificationsForKind(kind):
+    '''
+    For a given input ``kind``, return the list of reStructuredText specifications
+    for the associated Breathe directive.
+    '''
+    # Change the defaults for .. doxygenclass:: and .. doxygenstruct::
+    if kind == "class" or kind == "struct":
+        return [
+          ":members:",
+          ":undoc-members:"
+        ]
+    # Change the defaults for .. doxygenenum::
+    elif kind == "enum":
+        return [":no-link:"]
+    # An empty list signals to Exhale to use the defaults
+    else:
+        return []
 # Setup the exhale extension
 exhale_args = {
     # These arguments are required
@@ -157,7 +175,10 @@ exhale_args = {
     # `breathe_projects[breathe_default_project]` in `conf.py`
     "exhaleDoxygenStdin": textwrap.dedent('''
         INPUT = ../models
-    ''')
+    '''),
+    "customSpecificationsMapping": utils.makeCustomSpecificationsMapping(
+        specificationsForKind
+    )
 }
 
 primary_domain = 'cpp'

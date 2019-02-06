@@ -25,4 +25,4 @@ seaborn
 sphinx_gallery
 mock
 breathe
-exhale
+exhale==0.2.2
