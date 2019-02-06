@@ -33,7 +33,7 @@ import os
 
 
 import pip
-
+import textwrap
 # pip.main(['install', 'Sphinx==1.5.6'])
 # pip.main(['install', 'sphinx-gallery'])
 
