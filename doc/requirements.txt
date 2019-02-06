@@ -24,3 +24,5 @@ Image
 seaborn
 sphinx_gallery
 mock
+breathe
+exhale
