@@ -41,14 +41,12 @@
 [[Titles should be one line and state what the example does.
 It should begin with a verb in the present tense and include type of model and/or method]]
 
-[[Extended summary - What does this script do?]]
+[[Extended summary - What does this script do? What is the purpose?]]
 
 This script simulates a neuron by an excitatory and an inhibitory
 population of neurons firing a Poisson spike train.
 Optimization is performed using the `bisection` method from Scipy,
 which simulates the network repeatedly.
-
-[[Why? What is the purpose or aim of this example?]]
 
 The aim  of this example script is to find a firing rate for the inhibitory
 population that will make the neuron fire at the same rate as the excitatory
@@ -63,8 +61,14 @@ useful  to learn how to apply method Y in NEST.
 
 The output shows the target neuron's membrane potential as a function of time.
 
-[[(If applicable) where is this example referenced in the literature? Note the
-   syntax of the reference. (Don't forget to add a "References" section!)]]
+[[ If applicable, state any prerequisite the reader needs to have installed or configured outside
+   of NEST]]
+
+Please ensure that you have configured MUSIC to be ON in your NEST configuration.
+``cmake -Dwith-music=[ON</path/to/music>]``
+
+[[ If applicable, where is this example referenced in the literature? Note the
+   syntax of the citation. (Don't forget to add a "References" section!)]]
 
 This example is also shown in Sander et al. [1]_.
 
