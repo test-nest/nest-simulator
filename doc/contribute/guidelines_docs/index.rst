@@ -25,7 +25,7 @@ For details on how to use Sphinx, see the official site for Sphinx documentation
 
 To run Sphinx locally on your computer first
 
-#. Install Sphinx
+* Install Sphinx
 
 Ubuntu/Debian:
 
