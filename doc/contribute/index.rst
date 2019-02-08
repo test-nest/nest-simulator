@@ -189,7 +189,7 @@ styleguide for any change you want to make to code or documentation.
 
 * :doc:`Cite NEST in your publication or poster! <citing_nest>`
 
-* :doc:`Guidelines for contributing to documentation <guidelines_docs/doc_guide>` (including PyNEST example scripts)
+* :doc:`Guidelines for contributing to documentation <guidelines_docs/index>` (including PyNEST example scripts)
 
 * **NEW** `Create models with our python-based modeling language  NESTML <https://github.com/nest/nestml>`_
 
