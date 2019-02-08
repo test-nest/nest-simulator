@@ -23,7 +23,10 @@ ensure that the name of the file begins with `plot_`
 
 .. pull-quote::
 
-   For example: ``plot_my_example.py``. And ensure that the file is put in the ``pynest/examples`` folder.
+   For example: ``plot_my_example.py``.
+
+And ensure that the file is put in the ``pynest/examples`` folder.
+
 
 
 If the output of your example is only text (e.g., `print(values)`), name your file
@@ -56,7 +59,7 @@ the output appears correctly.
 
 .. code-block:: python
 
-   %run ./plot_myexampleneuron.py
+   %run ./plot_my_example.py
 
 ----
 
@@ -211,11 +214,14 @@ In your browser, you should see a generic `Welcome to project_name's documentati
    This webpage will NOT look like the NEST documentation website because we have not set up the same theme
    in your test case. The theme NEST uses is ``sphinx_rtd_theme``. To replace the theme go to https://sphinx-rtd-theme.readthedocs.io/en/latest/installing.html
 
-Look over the HTML version of your script and check that
+Check the html version of your script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Please make sure that
 
 * the code is in code blocks
-* comments are outside code blocks
-* all output is generated correctly (including image(s))
+* comment blocks are outside code blocks
+* all output is generated correctly (e.g., image appears, values are shown and are correct)
 * references are properly formatted
 * content is clear, and there are no grammar mistakes
 
