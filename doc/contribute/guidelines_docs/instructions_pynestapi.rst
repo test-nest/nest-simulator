@@ -170,7 +170,7 @@ In your browser, you should see a generic `Welcome to project_name's documentati
 .. note::
 
    This webpage will NOT look like the NEST documentation website because we have not set up the same theme
-   in your test case. The theme NEST uses is ``sphinx_rtd_theme``. To replace the theme go to https://sphinx-rtd-theme.readthedocs.io/en/latest/installing.html
+   in your test case. NEST uses a modified version of the ``sphinx_rtd_theme``. To replace the theme go to https://sphinx-rtd-theme.readthedocs.io/en/latest/installing.html
 
 
 
