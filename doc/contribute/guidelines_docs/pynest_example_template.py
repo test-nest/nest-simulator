@@ -21,9 +21,9 @@
 
 """This template demonstrates how to create an example python script.
 
-   It is based on the NumPy style docstring and uses reStructured text mark
-   up. Extra annotations that explain each section are marked with brackets like this
-   [[ remove this content ]].
+   It is based on the `NumPy style docstring <https://numpydoc.readthedocs.io/en/latest/format.html>`_ and uses
+   :doc:`reStructured text mark up <rst_primer>`. Extra annotations that explain
+   each section are marked with brackets like this [[ remove this content ]].
 
    You can copy this file and replace the text to fit
    your example, but keep the names of section headings in the order you see here. The
@@ -35,11 +35,13 @@
    Text explanations within the code-block need to begin with a line of hashes.
 """
 
-# [[Titles should begin with a verb and include type of model and/or method]]
 
 """ Simulate a balanced neuron with the bisection method
 ----------------------------------------------------------------
-[[What does this script do?]]
+[[Titles should be one line and state what the example does.
+It should begin with a verb in the present tense and include type of model and/or method]]
+
+[[Extended summary - What does this script do?]]
 
 This script simulates a neuron by an excitatory and an inhibitory
 population of neurons firing a Poisson spike train.
@@ -52,19 +54,19 @@ The aim  of this example script is to find a firing rate for the inhibitory
 population that will make the neuron fire at the same rate as the excitatory
 population.
 
-[[who would benefit from this example?]]
+[[who would benefit from this example? Do you have a use case?]]
 
-People interested in x research may find this useful. The example here may be 
+People interested in x research may find this useful. The example here may be
 useful  to learn how to apply method Y in NEST.
 
 [[What kind of output is expected?]]
 
 The output shows the target neuron's membrane potential as a function of time.
 
-[[(If applicable) where is this example referenced in the literature?]]
+[[(If applicable) where is this example referenced in the literature? Note the
+   syntax of the reference. (Don't forget to add a "References" section!)]]
 
 This example is also shown in Sander et al. [1]_.
-
 
 
 [[ Include a couple of related examples, models, or functions in the see also section]]
@@ -73,7 +75,7 @@ See Also
 ---------
 intrinisic_current_spiking
 intrisic_current_subthreshold
-
+:ref:`some other doc <label_name>`
 
 Notes
 ------
@@ -106,10 +108,12 @@ References
        Patterns, Processes and Evolutionary Trends. New York: Van Nostrand
        Reinhold, 471–530.
 
+[[ Author(s) should be comma separated with first name as initials followed by last name ]]
+
 :Authors:
     D Adams, N Gaiman
 
-    [[ Include a couple of comma-separated keywords - this will help us increase 
+    [[ Include a couple of comma-separated keywords - this will help us increase
        discoverability of related documents ]]
 
 KEYWORDS: scipy, poisson spike train, precise
@@ -119,8 +123,8 @@ import nest  # begin with imports
 
 ###############################################################################
 # [[After the initial docstring, all following comment blocks must begin with a 
-# a line of hashes and each line of a block must begin with a hash. This will 
-# allow us to generate nice looking examples for the website! ]] 
+# a line of hashes and each line of a block must begin with a hash. This will
+# allow us to generate nice looking examples for the website! ]]
 # The excitatory `poisson_generator` (`noise[0]`) and the voltmeter are
 # configured using `SetStatus`, which expects a list of node handles and
 # a list of parameter dictionaries.

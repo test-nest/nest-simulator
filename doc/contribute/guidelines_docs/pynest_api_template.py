@@ -19,10 +19,10 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-"""This template demonstrates how a docstring should look.
+"""This template demonstrates how a docstring for the PyNEST API should look.
 
-   It is based on the NumPy style docstring and uses reStructured text mark
-   up. Extra annotations are marked with brackets like this
+   It is based on the `NumPy style docstring <https://numpydoc.readthedocs.io/en/latest/format.html>`_ and uses
+   :doc:`reStructured text mark up <rst_primer>`. Extra annotations are marked with brackets like this
    [[ remove content ]].  Copy this docstring and replace the text to fit
    your function, but do not change the headings and keep the order. The
    bracketed sections should be removed completely from the final version.
@@ -33,6 +33,13 @@
 def get.Connections(source=None, target=None, synape_model=None,
                     synapse_label=None):
     """Return an array of connection identifiers
+    [[ In a single 'summary line', state what the function does ]]
+    [[ All functions should have a docstring with at least a summary line ]]
+
+
+    [[ Below summary line (separated by new line), there should be an extended
+       summary section that should be used to clarify functionality.]]
+
 
     Any combination of source, target, synapse_model and
     synapse_label parameters is permitted.
@@ -45,7 +52,8 @@ def get.Connections(source=None, target=None, synape_model=None,
 
             `ndobj_old` will be removed in NumPy 2.0.0, it is replaced by
             `ndobj_new` because the latter works also with array subclasses.
-
+    
+    [[ For all headings ensure the underline --- is at least the lenghth of the heading ]] 
     Parameters
     ----------
     source : list, optional
@@ -76,7 +84,7 @@ def get.Connections(source=None, target=None, synape_model=None,
     Details on the connectivity. [[ Here details regarding the code or further
     explanations can be included. This section may include mathematical
     equations, written in LaTeX format. You can include references to relevant
-    papers using the reStructured format ]]
+    papers using the reStructured format. Do not include model formulas ]]
 
     The discrete-time Fourier time-convolution [1]_ property states that
 
@@ -88,6 +96,8 @@ def get.Connections(source=None, target=None, synape_model=None,
     The value of :math:`\omega` is larger than 5.
 
 
+
+    [[ The See Also section should include 2 or 3 related functions. ]]
 
     See Also
     ---------
