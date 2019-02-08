@@ -53,7 +53,7 @@ PyPI:
 
 .. _rst_primer:
 
-ReStructured text Primer
+ReStructured text primer
 --------------------------
 
 .. literalinclude:: rst_primer.rst
