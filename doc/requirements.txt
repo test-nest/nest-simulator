@@ -2,7 +2,7 @@ matplotlib
 recommonmark
 sphinx
 sphinx_autobuild
-PyYAML
+PyYAML>=4.21b
 docutils
 csvkit
 yamllint
