@@ -36,9 +36,8 @@ I have a question about NEST!
 
 .. note::
 
+ We encourage everyone to use the mailing list to ask questions or get help with troubleshooting.
  Please don't file an issue on Github to ask a question.
-
-Check out our FAQ [nc]
 
 We have an official :doc:`NEST user mailing list <guidelines_mailinglist>`, which is intended to be a forum:
 
