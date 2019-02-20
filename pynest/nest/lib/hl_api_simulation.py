@@ -23,8 +23,27 @@
 Functions for simulation control
 """
 
-from .hl_api_helper import *
 from contextlib import contextmanager
+
+from ..ll_api import *
+from .hl_api_helper import *
+
+__all__ = [
+    'Cleanup',
+    'DisableStructuralPlasticity',
+    'EnableStructuralPlasticity',
+    'GetKernelStatus',
+    'GetStructuralPlasticityStatus',
+    'Install',
+    'Prepare',
+    'ResetKernel',
+    'ResetNetwork',
+    'Run',
+    'RunManager',
+    'SetKernelStatus',
+    'SetStructuralPlasticityStatus',
+    'Simulate',
+]
 
 
 @check_stack
@@ -137,14 +156,6 @@ def RunManager():
         yield
     finally:
         Cleanup()
-
-
-@check_stack
-def ResumeSimulation():
-    """Resume an interrupted simulation.
-    """
-
-    sr("ResumeSimulation")
 
 
 @check_stack

@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
-
-# makedocsource.sh
+# -*- coding: utf-8 -*-
+#
+# ll_api.py
 #
 # This file is part of NEST.
 #
@@ -19,18 +19,43 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
+"""
+Low-level API of PyNEST Topology Module
+"""
 
-# This shell script is part of the NEST Travis CI build and test environment.
-# It is invoked by the top-level Travis script '.travis.yml'.
-#
-# NOTE: This shell script is tightly coupled to Python script
-#       'extras/parse_travis_log.py'.
-#       Any changes to message numbers (MSGBLDnnnn) or the variable name
-#      'file_names' have effects on the build/test-log parsing process.
+import nest
 
-cd ../extras/help_generator
-python webdoc.py ../../pynest/examples ../../doc/examples ../../doc/examples
+__all__ = [
+    'topology_func',
+]
 
-# Now integrated in webdoc.py
-# cd ../../doc/ipynb/
-# ipython nbconvert --to markdown exact-integration.ipynb
+
+def topology_func(slifunc, *args):
+    """
+    Execute SLI function `slifunc` with arguments `args` in Topology namespace.
+
+
+    Parameters
+    ----------
+    slifunc : str
+        SLI namespace expression
+
+
+    Other parameters
+    ----------------
+    args : dict
+        An arbitrary number of arguments
+
+
+    Returns
+    -------
+    out :
+        Values from SLI function `slifunc`
+
+
+    See also
+    --------
+    nest.ll_api.sli_func
+    """
+
+    return nest.ll_api.sli_func(slifunc, *args)
