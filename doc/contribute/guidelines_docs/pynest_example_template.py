@@ -1,3 +1,17 @@
+"""[[ This template demonstrates how to create an example python script for NEST.
+
+   The format is based on `NumPy style docstring <https://numpydoc.readthedocs.io/en/latest/format.html>`_ and uses
+   reStructured text mark up. Please review the syntax rules if you are unfamiliar with
+   either reStructured text or NumPy style docstrings.
+
+   Copy this file and replace the sample text with a description of your script.
+   The double bracketed sections [[ ]], which provide explanations, should be completely
+   removed from your final version - Including this entire docstring!
+
+   Your script should contain a complete code-block that begins with all
+   necessary imports and ends with code that displays the output.]]
+"""
+
 # -*- coding: utf-8 -*-
 #
 # pynest_example_template.py
@@ -19,29 +33,14 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-"""This template demonstrates how to create an example python script.
-
-   It is based on the `NumPy style docstring <https://numpydoc.readthedocs.io/en/latest/format.html>`_ and uses
-   :doc:`reStructured text mark up <rst_primer>`. Extra annotations that explain
-   each section are marked with brackets like this [[ remove this content ]].
-
-   You can copy this file and replace the text to fit
-   your example, but keep the names of section headings in the order you see here. The
-   bracketed sections should be removed completely from the final version.
-
-   Your script should contain a complete code-block that begins with all
-   necessary imports and ends with code that displays the output.
-
-   Text explanations within the code-block need to begin with a line of hashes.
-"""
-
-
 """ Simulate a balanced neuron with the bisection method
 ----------------------------------------------------------------
-[[Titles should be one line and state what the example does.
+[[ Titles should be one line and state what the example does.
 It should begin with a verb in the present tense and include type of model and/or method]]
 
-[[Extended summary - What does this script do? What is the purpose?]]
+[[ Extended summary - a detailed explanation of your example. Try to answer the 
+folowing questions. ]]
+[[ What does this script do? What is the purpose?]]
 
 This script simulates a neuron by an excitatory and an inhibitory
 population of neurons firing a Poisson spike train.
@@ -52,49 +51,51 @@ The aim  of this example script is to find a firing rate for the inhibitory
 population that will make the neuron fire at the same rate as the excitatory
 population.
 
-[[who would benefit from this example? Do you have a use case?]]
-
-People interested in x research may find this useful. The example here may be
-useful  to learn how to apply method Y in NEST.
-
-[[What kind of output is expected?]]
+[[ What kind of output is expected?]]
 
 The output shows the target neuron's membrane potential as a function of time.
 
-[[ If applicable, state any prerequisite the reader needs to have installed or configured outside
-   of NEST]]
+[[ Does this example have a real world application or use case?
+  Are there particular applications or areas of research that would benefit from this example?
+  ]]
+
+This model used here is applicable for neurorobotics, particularly for cases ...
+
+
+[[ If applicable, state any prerequisite the reader needs to have installed or configured
+   that is not standard ]]
 
 Please ensure that you have configured MUSIC to be ON in your NEST configuration.
 ``cmake -Dwith-music=[ON</path/to/music>]``
 
-[[ If applicable, where is this example referenced in the literature? Note the
-   syntax of the citation. (Don't forget to add a "References" section!)]]
+[[ If applicable, mention the literature reference for this example.
+   Note the syntax of the citation. And don't forget to add a "References" section!]]
 
-This example is also shown in Sander et al. [1]_.
+This model used here corresponds to the formulation presented in Sander et al. [1]_
+and the bisection method developed in Gewaltig and Diesmann [2]_.
 
 
-[[ Include a couple of related examples, models, or functions in the see also section]]
+[[ See Also section - Include a couple of related examples, models, or functions. ]]
 
 See Also
 ---------
-intrinisic_current_spiking
-intrisic_current_subthreshold
-:ref:`some other doc <label_name>`
+:ref:`Intrinsic current subthreshold <label_name>`
+:doc:`some other doc </path/to/filename>`
 
 Notes
 ------
-[[Additional information can be included here regarding background theory, relevant mathetmatical equations etc.]]
+[[ Additional information can be included here regarding background theory, relevant mathetmatical equations etc.]]
 
 The value of :math:`\omega` is X.
 For the population and time-averaged from the spiking simulation:
-[[Note the syntax used for displaying equations uses reStructured text with LaTeX ]]
+[[ Note the syntax used for displaying equations uses reStructured text directive with LaTeX math formulae ]]
 
 .. math::
 
     X(e^{j\omega } ) = x(n)e^{ - j\omega n}
 
- * use the asterisk for bullet items
- * second item
+ * you can use the asterisk for bullet items
+ * bullet points are usually more easily read than paragraphs
 
 References
 ------------
@@ -103,16 +104,15 @@ References
        journal followed by volume and page range. Include the doi if
        applicable.]]
 
-.. [1] Sander M., et al. 2011. Biology of the sauropod dinosaurs: The
+.. [1] Sander M., et al. (2011). Biology of the sauropod dinosaurs: The
        evolution of gigantism. Biological Reviews. 86(1):117-155.
        https://doi.org/10.111/j.1469-185x.2010.00137.x
 
-.. [2] Francillon-Vieillot H, et al. 1990. Microstructure and mineralization of
-       vertebrate skeletal tissues. In: Carter J ed. Skeletal Biomineralization
-       Patterns, Processes and Evolutionary Trends. New York: Van Nostrand
-       Reinhold, 471–530.
+.. [2] Gewaltig M-O, Diesmann M (2007). NEST (Neural Simulation Tool) Scholarpedia
+       2(4):1430.
 
-[[ Author(s) should be comma separated with first name as initials followed by last name ]]
+[[ Include your name in the author section, so we know who contributed. 
+  Author(s) should be comma separated with first name as initials followed by last name ]]
 
 :Authors:
     D Adams, N Gaiman
@@ -123,12 +123,14 @@ References
 KEYWORDS: scipy, poisson spike train, precise
 """
 
-import nest  # begin with imports
+import nest  # [[ begin code section with imports]]
+import scipy
 
 ###############################################################################
-# [[After the initial docstring, all following comment blocks must begin with a 
+# [[After the initial docstring above, all following comment blocks must begin with a 
 # a line of hashes and each line of a block must begin with a hash. This will
 # allow us to generate nice looking examples for the website! ]]
+#
 # The excitatory `poisson_generator` (`noise[0]`) and the voltmeter are
 # configured using `SetStatus`, which expects a list of node handles and
 # a list of parameter dictionaries.
@@ -139,7 +141,10 @@ import nest  # begin with imports
 nest.SetStatus(noise, [{"rate": n_ex * r_ex}, {"rate": n_in * r_in}])
 nest.SetStatus(voltmeter, {"withgid": True, "withtime": True})
 
+complete code ...
+
+
 ##############################################################################
 # Finally, we plot the target neuron's membrane potential as a function of time
 
-nest.voltage_trace.from_device(voltmeter)  # end with output
+nest.voltage_trace.from_device(voltmeter)  # [[ end with output]]
