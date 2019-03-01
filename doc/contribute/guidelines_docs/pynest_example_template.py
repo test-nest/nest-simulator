@@ -11,7 +11,6 @@
    Your script should contain a complete code-block that begins with all
    necessary imports and ends with code that displays the output.]]
 """
-
 # -*- coding: utf-8 -*-
 #
 # pynest_example_template.py
