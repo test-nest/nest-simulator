@@ -1,3 +1,17 @@
+"""[[ This template demonstrates how to create a docstring for the PyNEST API.
+
+   If you have modified an API, please ensure you update the docstring!
+
+   The format is based on `NumPy style docstring <https://numpydoc.readthedocs.io/en/latest/format.html>`_ and uses
+   reStructured text mark up. Please review the syntax rules if you are unfamiliar with
+   either reStructured text or NumPy style docstrings.
+
+   Copy this file and replace the sample text with a description of the API.
+   The double bracketed sections [[ ]], which provide explanations, should be completely
+   removed from your final version - Including this entire docstring!
+
+   ]]
+"""
 # -*- coding: utf-8 -*-
 #
 # pynest_api_template.py
@@ -19,16 +33,6 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-"""This template demonstrates how a docstring for the PyNEST API should look.
-
-   It is based on the `NumPy style docstring <https://numpydoc.readthedocs.io/en/latest/format.html>`_ and uses
-   :doc:`reStructured text mark up <rst_primer>`. Extra annotations are marked with brackets like this
-   [[ remove content ]].  Copy this docstring and replace the text to fit
-   your function, but do not change the headings and keep the order. The
-   bracketed sections should be removed completely from the final version.
-
-"""
-
 
 def get.Connections(source=None, target=None, synape_model=None,
                     synapse_label=None):
@@ -40,11 +44,10 @@ def get.Connections(source=None, target=None, synape_model=None,
     [[ Below summary line (separated by new line), there should be an extended
        summary section that should be used to clarify functionality.]]
 
-
     Any combination of source, target, synapse_model and
     synapse_label parameters is permitted.
 
-    [[ Deprecation warnings should appear directly after a brief description
+    [[ Deprecation warnings should appear directly after a brief description.
       It should state  what version the object was deprecated, when it will be
       removed and what recommend way obtains the same functionality]]
 
@@ -53,7 +56,8 @@ def get.Connections(source=None, target=None, synape_model=None,
             `ndobj_old` will be removed in NumPy 2.0.0, it is replaced by
             `ndobj_new` because the latter works also with array subclasses.
     
-    [[ For all headings ensure the underline --- is at least the lenghth of the heading ]] 
+    [[ For all headings ensure the underline --- is at least the length of the heading ]] 
+
     Parameters
     ----------
     source : list, optional
@@ -113,7 +117,7 @@ def get.Connections(source=None, target=None, synape_model=None,
        journal followed by volume and page range. Include the doi if
        applicable.]]
 
-    .. [1] Bonewald LF. 2011. The amazing osteocyte. Journal of Bone and
+    .. [1] Bonewald LF. (2011). The amazing osteocyte. Journal of Bone and
            Mineral Research 26(2):229–238. DOI: 10.1002/jbmr.320.
 
     [[Keywords that idenfity important aspects of the function but not the
