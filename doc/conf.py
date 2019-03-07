@@ -186,7 +186,7 @@ pygments_style = 'sphinx'
 todo_include_todos = False
 
 # add numbered figure link
-numfig = True
+numfig = False
 
 # -- Options for HTML output ----------------------------------------------
 
