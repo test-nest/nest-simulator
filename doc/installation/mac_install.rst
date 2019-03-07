@@ -44,6 +44,8 @@ NEST from the most recent sources on Github, use:
 
          brew install nest --HEAD
 
+.. mac_manual_install::
+
 Manual installation
 --------------------
 
