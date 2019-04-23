@@ -14,7 +14,7 @@ dependencies:
 - cmake
 - commonmark
 - cryptography
-- cython==0.23.4
+- cython
 - docutils
 - future
 - gsl
@@ -42,15 +42,15 @@ dependencies:
 - pyopenssl
 - pysocks
 - pytest
-- python==3.5
+- python
 - pytz
-- readline=6.2
+- readline
 - requests
 - setuptools
 - scipy
 - six
 - snowballstemmer
-- sphinx==1.5.6
+- sphinx
 - sphinxcontrib
 - sphinxcontrib-websupport
 - sphinx_rtd_theme
