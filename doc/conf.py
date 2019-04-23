@@ -136,11 +136,7 @@ breathe_default_project = "EXTRACT_MODELS"
 #    'backreferences_dir': False
 # }
 
-read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
-
-if read_the_docs_build:
-
-    subprocess.call('doxygen', shell=True)
+subprocess.call('doxygen', shell=True)
 
 mathjax_path = \
     "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax" \
