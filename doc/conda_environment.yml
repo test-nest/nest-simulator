@@ -50,7 +50,7 @@ dependencies:
 - scipy
 - six
 - snowballstemmer
-- sphinx
+- sphinx>=2.0.0
 - sphinxcontrib
 - sphinxcontrib-websupport
 - sphinx_rtd_theme
